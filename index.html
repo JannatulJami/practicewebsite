@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="4f061eb5.png">
+    <title>welcome to the dollhouse</title> 
+<style>
+
+
+
+/*   -=====-                         -=====-
+                _..._                           _..._
+              .~     `~.                     .~`     ~.
+      ,_     /          }                   {          \     _,
+     ,_\'--, \   _.'`~~/                     \~~`'._   / ,--'/_,
+      \'--,_`{_,}    -(                       )-    {,_}`_,--'/
+       '.`-.`\;--,___.'_                     _'.___,--;/`.-`.'
+         '._`/    |_ _{@}                   {@}_ _|    \`_.'
+            /     ` |-';/           _       \;'-| `     \
+           /   \    /  |       _   {@}_      |  \    /   \
+          /     '--;_       _ {@}  _Y{@}        _;--'     \
+         _\          `\    {@}\Y/_{@} Y/      /`          /_
+        / |`-.___.    /    \Y/\|{@}Y/\|//     \    .___,-'| \
+^^^^`--`------'`--`^^^^^^^^^^^^^^^^^^^^^^^^^`--`'------`--`^^^^^^^ */
+
+@font-face {
+  font-family: PC98;
+  src:url("fonts/pc-9800.ttf");
+}
+
+@font-face {
+  font-family: GothicPixels;
+  src:url("/GothicPixels.ttf");
+}
+
+@font-face {
+  font-family: Alkhemikal;
+  src:url("/Alkhemikal.ttf");
+}
+
+@font-face {
+  font-family: VeniceClassic;
+  src:url("/VeniceClassic.ttf");
+}
+
+@font-face {
+  font-family: wayfarers-toy-box;
+  src:url("/wayfarers-toy-box.ttf");
+}
+
+/*   fonts   */
+
+body {
+  background-image: url("background.gif");
+  background-color: #f0efed;
+  overflow-y: scroll;
+  cursor: url(https://cur.cursors-4u.net/mechanics/mec-5/mec443.cur), auto;
+  font-family: PC98;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 50%; /* Start positioning from the center of the container */
+  margin-top: 10px;
+  transform: translateX(-50%); /* Offset by half its own width */
+  width: 1050px;
+  height: 150px;
+  background-color: #D4D4D4;
+  border-width: 1px;
+  border-color: #000;
+  border-style: solid;
+  background-color: #fff;
+  background-image: url("main site stuff/0c9f88a5c8605a71c855c4455cc978dd.jpg");
+}
+
+/*parent container*/
+.container {
+  position: relative; /* Allows .header to be positioned within it */
+  display: flex;
+  justify-content: center; /* Center the items horizontally */
+  align-items: flex-start; /* Align items at the top */
+  gap: 10px; /* Space between the columns */
+  margin: 0 auto;
+  padding-top: 100px; /* Offset for the header height */
+  height: 100vh; /* Full viewport height */
+  box-sizing: border-box;
+  padding-top: 170px; /* Add space equal to header height plus extra space */
+  font-family: PC98;
+}
+
+#left-column {
+  margin: 3px;
+  float: left;
+  width: 140px; /* Wider width to give text more space */
+  height: auto;
+  padding: 5px;
+  background-image: url("main site stuff/w12-0b.gif");
+  background-color: #D4D4D4;
+  border-width: 1px;
+  border-color: #000;
+  border-style: solid;
+  text-align: left;
+  box-sizing: border-box;
+  font-family: PC98;
+  font-size: 14px;
+  line-height: 1.4;
+  word-break: break-word; /* Ensures long words break */
+  white-space: normal; /* Allows natural wrapping */
+}
+
+#left-column .styled-link {
+  display: block;
+  padding: 4px 0; /* Reduced padding to fit content */
+  color: #000;
+  background-color: #f2f2f2;
+  text-align: center;
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  text-decoration: none;
+  box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 20%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+}
+
+#left-column .styled-link:first-child {
+  border-top: 1px solid #000;
+}
+
+#left-column .styled-link:hover {
+  color: #000;
+  background-color: #fff;
+  text-decoration: none;
+}
+
+.holder {
+  margin: 5px;
+  width: 680px;
+  height: auto;
+  padding: 10px;
+  background: #D4D4D4;
+  border-width: 1px;
+  border-color: #000;
+  border-style: solid;
+  font-family: PC98;
+  font-size: 14px;
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.right-container {
+  margin: 5px;
+  width: 250px; /* Adjust the width as needed */
+  height: auto;
+  padding: 10px;
+  background-color: #D4D4D4;
+  border-width: 1px;
+  border-color: #000;
+  border-style: solid;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* First column is 200px, second column takes remaining space */
+  gap: 10px; /* Space between grid items */
+  margin: auto;
+  width: 100%; /* Make it 100% of the container's width */
+  max-width: 100%; /* Ensure it doesn't exceed the width of .holder */
+  box-sizing: border-box; /* Include padding and border in the width */
+  padding: 5px;
+  font-family: PC98;
+  font-size: 14px;
+  border-width: 12px;
+  border-style: solid;
+  border-image: url("https://i.imgur.com/NJa4bp2.png") 9 fill round;
+}
+
+.box2 {
+  padding: 10px;
+  background-color: #f2f2f2;
+  font-family: PC98;
+  font-size: 14px;
+  text-align: left;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #5e5e5e;
+  box-shadow: inset 13px 0px 6px -10px rgb(66 66 66 / 20%), inset -13px 0px 6px -10px rgb(66 66 66 / 56%), inset 0px 13px 6px -10px #ffffff, inset 0px -13px 6px -10px rgb(66 66 66 / 38%);
+}
+
+.box2:first-child {
+  grid-column: 1 / -1; /* Makes the first .box2 span both columns */
+}
+
+.box2:nth-child(2) {
+  grid-column: 1; /* Second .box2 is in the first column (200px) */
+}
+
+.box2:nth-child(3) {
+  grid-column: 2; /* Third .box2 is in the second column (remaining space) */
+}
+
+.box2:nth-child(4) {
+  grid-column: 1 / -1; /* Fourth .box2 spans both columns, fitting directly beneath the previous two */
+}
+
+.box2:nth-child(5) {
+  grid-column: 1 / -1; /* Fourth .box2 spans both columns, fitting directly beneath the previous two */
+}
+
+.box2:nth-child(6) {
+  grid-column: 1 / -1; /* Fourth .box2 spans both columns, fitting directly beneath the previous two */
+}
+
+#button {
+  width: 177px;
+  height: 102px;
+  font-family: PC98;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+a:link {
+  color: #000;
+  background-color: transparent;
+}
+
+a:visited {
+  color: #000;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #4a4a4a;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: #000;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+h1 {
+  color: #303030;
+  font-size: 24px;
+  text-align: center;
+  font-family: GothicPixels;
+  margin-top: 10px;
+}
+
+h2 {
+  font-family: GothicPixels;
+  font-size: 14px;
+  color: #000;
+  line-height: 5px;
+  height: 30px;
+  width: 120px;
+  text-align: center;
+}
+
+hr.black {
+  border-top: 2px solid black;
+}
+
+
+.crt::before {
+  content: " ";
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+  z-index: 20;
+  background-size: 100% 2px, 3px, 100%;
+  pointer-events: none;
+}
+
+#statuscafe {
+    padding: .5em;
+    background-color: white;
+    border: 1px solid black;
+  font-family: PC98;
+  font-size: 14px;
+    height: 60px;
+    overflow-y: scroll;
+}
+
+#statuscafe-username {
+    margin-bottom: .5em;
+}
+#statuscafe-content {
+    margin: 0 1em 0.5em 1em;
+}
+
+
+
+
+
+/*********************************
+* Honeycomb Stamp Layouts v. 1.2 *
+* CSS by Mooeena                *
+* Free to use/modify w/ credit   *
+* http://mooeena.neocities.org   *
+* 15 widths and 2 preset layouts *
+* To use: include the classes    *
+* "honeycomb hc-[PICK LAYOUT]"   *
+* to your images' container div. *
+*********************************/
+.honeycomb { display: grid;
+             grid-auto-rows: 28px;
+             gap: 30px 18px;
+             padding: 0 32px 56px 0; }
+.hc-2 { grid-template-columns: repeat(2, 32px); } /*Infinite-length section 2 stamps wide*/
+.hc-3 { grid-template-columns: repeat(3, 32px); } /*Infinite-length section 3 stamps wide*/
+.hc-4 { grid-template-columns: repeat(4, 32px); } /*Infinite-length section 4 stamps wide*/
+.hc-5 { grid-template-columns: repeat(5, 32px); } /*Infinite-length section 5 stamps wide*/
+.hc-6 { grid-template-columns: repeat(6, 32px); } /*Infinite-length section 6 stamps wide*/
+.hc-7 { grid-template-columns: repeat(7, 32px); } /*Infinite-length section 7 stamps wide*/
+.hc-8 { grid-template-columns: repeat(8, 32px); } /*Infinite-length section 8 stamps wide*/
+.hc-9 { grid-template-columns: repeat(9, 32px); } /*Infinite-length section 9 stamps wide*/
+.hc-10 { grid-template-columns: repeat(10, 32px); } /*Infinite-length section 10 stamps wide*/
+.hc-11 { grid-template-columns: repeat(11, 32px); } /*Infinite-length section 11 stamps wide*/
+.hc-12 { grid-template-columns: repeat(12, 32px); } /*Infinite-length section 12 stamps wide*/
+.hc-14 { grid-template-columns: repeat(14, 32px); } /*Infinite-length section 14 stamps wide*/
+.hc-16 { grid-template-columns: repeat(16, 32px); } /*Infinite-length section 16 stamps wide*/
+.hc-18 { grid-template-columns: repeat(18, 32px); } /*Infinite-length section 18 stamps wide*/
+.hc-20 { grid-template-columns: repeat(20, 32px); } /*Infinite-length section 20 stamps wide*/
+.hc-mini { grid-template-columns: repeat(3, 32px); padding-bottom:28px;} /*Hexagonal group of max 7 stamps*/
+.hc-hive { grid-template-columns: repeat(7, 32px); padding-bottom:28px;} /*Oval-shaped group of max 17 stamps*/
+/*The following concern the interlocking pattern of the grids:*/
+.hc-2 > :nth-child(2n+1), .hc-4 > :nth-child(2n+1), .hc-6 > :nth-child(2n+1), .hc-8 > :nth-child(2n+1), .hc-10 > :nth-child(2n+1), .hc-12 > :nth-child(2n+1), .hc-14 > :nth-child(2n+1), .hc-16 > :nth-child(2n+1), .hc-18 > :nth-child(2n+1), .hc-20 > :nth-child(2n+1) { margin-top: 28px; }
+.hc-3 > :nth-child(6n+1), .hc-3 > :nth-child(6n+3), .hc-3 > :nth-child(6n+4), .hc-3 > :nth-child(6n) { margin-top: 28px; }
+.hc-5 > :nth-child(10n+1), .hc-5 > :nth-child(10n+3), .hc-5 > :nth-child(10n+5), .hc-5 > :nth-child(10n+6), .hc-5 > :nth-child(10n+8), .hc-5 > :nth-child(10n) { margin-top: 28px; }
+.hc-7 > :nth-child(14n+1), .hc-7 > :nth-child(14n+3), .hc-7 > :nth-child(14n+5), .hc-7 > :nth-child(14n+7), .hc-7 > :nth-child(14n+8), .hc-7 > :nth-child(14n+10), .hc-7 > :nth-child(14n+12), .hc-7 > :nth-child(14n) { margin-top: 28px; }
+.hc-9 > :nth-child(18n+1), .hc-9 > :nth-child(18n+3), .hc-9 > :nth-child(18n+5), .hc-9 > :nth-child(18n+7), .hc-9 > :nth-child(18n+9), .hc-9 > :nth-child(18n+10), .hc-9 > :nth-child(18n+12), .hc-9 > :nth-child(18n+14), .hc-9 > :nth-child(18n+16), .hc-9 > :nth-child(18n) { margin-top: 28px; }
+.hc-11 > :nth-child(22n+1), .hc-11 > :nth-child(22n+3), .hc-11 > :nth-child(22n+5), .hc-11 > :nth-child(22n+7), .hc-11 > :nth-child(22n+9), .hc-11 > :nth-child(22n+11), .hc-11 > :nth-child(22n+12), .hc-11 > :nth-child(22n+14), .hc-11 > :nth-child(22n+16), .hc-11 > :nth-child(22n+18), .hc-11 > :nth-child(22n+20), .hc-11 > :nth-child(22n) { margin-top: 28px; }
+.hc-mini > :nth-child(1), .hc-mini > :nth-child(3), .hc-mini > :nth-child(4), .hc-mini > :nth-child(6) { margin-top: 28px; }
+.hc-mini > :nth-child(7) { grid-area: 3/2; }
+.hc-hive > :nth-child(1), .hc-hive > :nth-child(3), .hc-hive > :nth-child(5), .hc-hive > :nth-child(7), .hc-hive > :nth-child(8), .hc-hive > :nth-child(10), .hc-hive > :nth-child(12), .hc-hive > :nth-child(14) { margin-top: 28px; }
+.hc-hive > :nth-child(15) { grid-area: 3/2; }
+.hc-hive > :nth-child(16) { grid-area: 3/4; }
+.hc-hive > :nth-child(17) { grid-area: 3/6; }
+.hc-center {margin: auto; width:min-content;} /* Add this class to center a group of stamps. */
+.hc-center > * {margin-left: -16px;}
+
+
+
+
+
+
+</style>
+</head>
+
+<body>
+  <div class="crt"></div>
+  
+  <div style="margin-left:1282px; margin-top:168px; position: absolute;z-index: 3"><img src="/tumblr_1da7bfd2bbd66c6218e47a9f54d641ab_79b22e29_100.gif" width="100%"></div>
+
+  <div style="margin-left:760px; margin-top:70px; position: absolute;z-index: 4; filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.69));"><img src="main site stuff/dithered-logo.png" width="500px"></div>
+  
+  <div style="margin-left:185px; margin-top:118px; position: absolute;z-index: 5;"><img src="nice.png"></div>
+  
+
+<div class="container">
+  <div class="header"></div>
+  <div id="left-column">
+  <!-- FC2 Counter  Starts here -->
+  <div style="text-align:center; margin-top: 5px; font-family: GothicPixels; font-size: 16px; background: #D4D4D4; border: 1px solid #000;">
+   visitor count <script language="javascript" type="text/javascript" src="//counter1.fc2.com/counter.php?id=40177934&main=1"></script><noscript><img src="//counter1.fc2.com/counter_img.php?id=40177934&main=1" /></noscript>
+  </div>
+  <!-- FC2 Counter  Ends here -->
+    <div style="text-align:center; margin-top: 5px; font-family: GothicPixels; font-size: 16px;">
+      <img src="719ccf12.png" width="22px"> main <img src="719ccf12.png" width="22px">
+    </div>
+    <p>
+      <a href="https://miserabledolly.neocities.org/sitemap" class="styled-link">sitemap</a>
+      <a href="https://miserabledolly.neocities.org/" class="styled-link">home</a>
+      <a href="https://miserabledolly.neocities.org/about" class="styled-link">about</a>
+      <a href="https://miserabledolly.net/art" class="styled-link">art</a>
+      <a href="" class="styled-link"><s>journal</s></a>
+      <a href="https://miserabledolly.net/guides" class="styled-link">guides</a>
+      <a href="https://miserabledolly.net/guestbook/guestbook" class="styled-link">guestbook</a>
+    </p>
+    <hr class="black">
+    <div style="text-align:center; font-family: GothicPixels; font-size: 16px;">
+      <img src="719ccf12.png" width="22px"> fun <img src="719ccf12.png" width="22px">
+    </div>
+    <p>
+      <a href="https://miserabledolly.net/bottlecaps" class="styled-link">bottlecaps</a>
+      <a href="url" class="styled-link"><s>dolls</s></a>
+      <a href="https://miserabledolly.neocities.org/beauty" class="styled-link">beauty</a>
+      <a href="https://miserabledolly.net/collections" class="styled-link">collections</a>
+      <a href="url" class="styled-link"><s>quizes</s></a>
+      <a href="https://miserabledolly.net/fanfiction" class="styled-link">fanfiction</a>
+      <a href="#manifesto" class="styled-link">manifesto</a>
+    </p>
+    <hr class="black">
+    <div style="text-align:center; font-family: GothicPixels; font-size: 16px;">
+      <img src="719ccf12.png" width="22px"> shrines <img src="719ccf12.png" width="22px">
+    </div>
+    <p>
+    <a href="https://miserabledolly.net/2077" class="styled-link">cyberpunk 2077</a>
+    </p>
+    <hr class="black">
+    <div style="text-align:center; font-family: GothicPixels; font-size: 16px;">
+      <img src="719ccf12.png" width="22px"> other <img src="719ccf12.png" width="22px">
+    </div>
+    <p>
+      <a href="https://miserabledolly.neocities.org/links" class="styled-link">links</a>
+      <a href="https://miserabledolly.neocities.org/archive" class="styled-link">archive</a>
+      <a href="https://neocities.org/site/miserabledolly" class="styled-link">neocities profile</a>
+    </p>
+    <hr class="black">
+    <p>
+    <div style="text-align:center;">
+    <a href="https://lovesick.cafe/grrrl"><img src="madebya-gray2.png"></a>
+    <a href="https://miserabledolly.net/bottlecaps"><img src="bottlecaps/bottlecaprevival.gif"></a>
+    <img src="https://ponywebring.neocities.org/mlp-webring.png" usemap="#webring-map" alt="MLP Webring" width="120px">
+            <map name="webring-map">
+              <area shape="rect" coords="11,14,144,69" href="https://ponywebring.neocities.org/">
+              <area shape="rect" coords="35,76,62,101" href="#" alt="Previous">
+              <area shape="rect" coords="89,77,117,101" href="#" alt="Next">
+              <area shape="rect" coords="67,72,85,100" href="#" alt="Random">
+            </map>
+          <script src="https://ponywebring.neocities.org/mlp-webring.js"></script>
+      <map name="noaimini14">
+        <area href="https://baccyflap.com/noai" shape="rect" coords="21,0,47,30" target="_blank" alt="no ai webring" title="no ai webring">
+        <area href="https://baccyflap.com/noai/?prv&s=kar" target="_top" shape="rect" coords="1,13,19,29" alt="previous" title="previous">
+        <area href="https://baccyflap.com/noai/?rnd" target="_top" shape="rect" coords="59,7,66,16" alt="random" title="random">
+        <area href="https://baccyflap.com/noai/?nxt&s=kar" target="_top" shape="rect" coords="68,1,86,17" alt="next" title="next">
+      </map>
+      <img usemap="#noaimini14" src="https://baccyflap.com/noai/miniwidget14.gif" alt="a bluegreen rectangle showing the words the NO AI webring, with NO AI being written by a fountain pen, all in the style of 16 bit Windows 95 icons. to either side are two equally Windows-95-style cursors pointing left and right, softly bouncing up and down. in between it all is a small black question mark">
+      <table>
+        <tr>
+          <td><a href="https://lopster.neocities.org/roring/lolzers/prev.html?id=49"><img src="https://lopster.neocities.org/roring/fotos/arr.png" height="10"></a></td>
+          <td><a href="https://lopster.neocities.org/roring/roring.html"><img src="https://lopster.neocities.org/roring/fotos/roring%20chan.png" width="100%"></a></td>
+          <td><a href="https://lopster.neocities.org/roring/lolzers/next.html?id=49"><img src="https://lopster.neocities.org/roring/fotos/gimme.png" height="10"></a></td>
+        </tr>
+      </table>
+      <a href="https://ourheroisasandwich.nekoweb.org/latinoring/thelatinowebring"><img id="index" src="https://ourheroisasandwich.nekoweb.org/latinoring/latinoring%20widget%20-%20cu.png" width="100%"></a>
+    </div>
+    <p>
+    <hr class="black">
+    <img src="6RGcbV1.gif" width="100%">
+    </div>
+  <div class="holder">
+      <div class="box">
+        <div class="box2">
+          <div style="float:left; padding-right:10px;">
+            <img src="b5ff5954.png" width="80px">
+          </div>
+          hello, i'm karla, and welcome to my site! this is where i test my css, html, and web design knowledge whenever i get random bouts of autism. this site is still a work in progress so expect various changes and missing links. if you want to link me, please feel free to! if you want a link back, just comment under my <a href="https://neocities.org/site/miserabledolly">profile</a> to let me know. you must have a 88x31 button! <img src="32a7b96e.gif" width="50px">
+        </div>
+        <div class="box2">
+          this site contains mature themes (18+). obviously nothing explicit, but there may be body horror elements, adult talk, and discussions of weed. you have been warned...
+          <hr>
+          <img src="cover4.jpg" width="100%">
+        </div>
+        <div class="box2">
+          psssst, you should click the menu buttons on the left. there's more to this site!
+          <hr>
+          <div id="statuscafe"><div id="statuscafe-username"></div><div id="statuscafe-content"></div></div><script src="https://status.cafe/current-status.js?name=nunwithguns" defer></script>
+          <hr>
+          <div style="float:right; padding-left: 10px;">
+            <img src="link.gif" width="150px">
+          </div>
+          <p>if you'd like to reach me i am on instagram @vwvampire or you could simply leave a comment on my <a href="https://neocities.org/site/miserabledolly">profile</a> and i'll get back to you as soon as i can :)
+          <br>
+          <br>
+          honeycomb script by <a href="https://mooeena.neocities.org/honeycomb">mooeena</a></p>
+          
+                  <!-- honeycomb code -->
+<p>
+<div class="honeycomb hc-7">
+<img class=" object-cover" src="honeycombs/16_plus.png">
+<img class=" object-cover" src="honeycombs/bisexual.png">
+<img class=" object-cover" src="honeycombs/photoshop.png">
+<img class=" object-cover" src="honeycombs/procreate.png">
+<a href="https://linktr.ee/doutarina"><img class=" object-cover" src="honeycombs/Honeycomb keroppi.png"></a>
+<a href="https://linktr.ee/doutarina"><img class=" object-cover" src="honeycombs/HoneycombTemplate neurodivergente.png"></a>
+<img class=" object-cover" src="honeycombs/letterboxd-2.png">
+</div>
+</p>
+
+        <!-- honeycomb code --> 
+          
+          
+        </div>
+
+        <div class="box2">
+          <marquee>
+            <a href="https://transbro.neocities.org/Buttons"><img src="powered by auitsm1.png"></a>
+            <img src="poweredbymac.gif">
+            <img src="ai.gif">
+            <img src="a9.jpg">
+            <img src="banporn.gif">
+            <img src="best_chrome.gif">
+            <img src="ilikecomputer.png">
+            <img src="tumblr_638516ea69653b54647e37d73c051410_00b5a84c_100.gif">
+            <img src="freegaza.gif">
+          </marquee>
+        </div>
+        <div class="box2">
+        <iframe src="/webdeck-player/index.html" height="250" width="600"></iframe>
+        </div>
+        <div class="box2">
+          <h1 id ="manifesto">manifesto</h1>
+          the internet should be chaotic, creative, and ours.
+          <p>
+          we remember a time when the web was personal. before algorithms decided what we wanted to see, there were blogs and forums full of weird, niche worlds. people built their own sites, wrote their own code, designed pages that actually reflected who they were—unpolished, imperfect, real. this was an internet where creativity came before conformity.
+          <p>
+          we reject the idea that ai and corporations should decide what the web is. we reject the sanitized, sterile designs that have replaced personal blogs with influencer feeds. we reject the belief that content has to be optimized and monetized for mass consumption.
+          <p>
+          so, we make our own blogs, write in our own voices, design our pages with purpose. we keep the old web alive by keeping our individuality online.  we’re here to make the internet as strange, unique, and human as we are.
+          <p>  
+          <hr>
+          <p>
+          <img src="main site stuff/39a67c4e531e38d06958d24b2013182a.jpg" width="100%">
+
+        </div>
+      </div>
+    </div>
+  <div class="right-container">
+      <div class="box2">
+        <div style="background-image: url('hkbh04.gif');">
+          <iframe src="https://www3.cbox.ws/box/?boxid=3509898&boxtag=kuNKZL" width="100%" height="262px" allowtransparency="yes" allow="autoplay" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto"></iframe>  
+        </div>
+      </div>
+      <br> 
+      
+      <div class="box2">
+        <div style="text-align: center; font-size: 18px;"><h1>updates</h1></div>
+        <hr>
+        <div style="font-size: 14px;">jan. 8: finished my collections page, thinking of making an entry page as my index and a separate .html file for the homepage</div>
+      </div>
+      <br>
+      <div class="box2">
+        <a href="https://www.last.fm/user/nunwithguns"><img src="https://lastfm-recently-played.vercel.app/api?user=nunwithguns" height="auto" width="100%"/></a>
+      </div>
+      <Br>
+      <iframe width="250" height="250" style="border:none" src="https://dimden.neocities.org/navlink/" name="neolink"></iframe>
+    </div>
+  </div>
+
+
+  
+</body>   
